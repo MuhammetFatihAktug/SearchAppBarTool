@@ -93,8 +93,12 @@ This widget similir to defaultBody only changed by change textField. You can add
 #
 
 ## Result
-
-![default_1](/img/defaultNew.png)
-![default_2](/img/defaultSearchNew.png)
-![default_3](/img/normalSearchNew.png)
+### defaultBody View
+![default_1](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/defaultNew.png)
+#
+### defaultSearchBody View
+![default_2](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/defaultSearchNew.png)
+#
+### normalSearchBody View
+![default_3](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/normalSearchNew.png)
 
