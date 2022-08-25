@@ -91,17 +91,17 @@ only activated by pressed. You can add 'suggestion' or 'past search' pages here.
 
 If user write on textField normalSearchBody will work.
 This widget similir to defaultBody only changed by change textField. You can add 'search results', 'found' or 'not found' pages here.
-#
+
 
 ## Result
 
 ## defaultBody View
 ![default_1](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/defaultNew.png)
-#
+
 
 ## defaultSearchBody View
 ![default_2](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/defaultSearchNew.png)
-#
+
 
 ## normalSearchBody View
 ![default_3](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/normalSearchNew.png)
