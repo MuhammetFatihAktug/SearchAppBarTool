@@ -3,3 +3,6 @@
 
 ## 0.1.0 - 25/08/2022
 * Fixed bugs
+
+## 0.1.1 - 25/08/2022
+* Fixed the onChange callback method*

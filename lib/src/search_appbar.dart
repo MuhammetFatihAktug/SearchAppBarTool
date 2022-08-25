@@ -1,11 +1,5 @@
-// TODO: Put public facing types in this file.
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
-
-/// Checks if you are awesome. Spoiler: you are.
-class Awesome {
-  bool get isAwesome => true;
-}
 
 typedef OnChange = void Function(String value);
 
@@ -82,26 +76,11 @@ class SearchAppBar extends StatelessWidget implements PreferredSizeWidget {
     return const Size.fromHeight(kToolbarHeight);
   }
 
-  void textFieldValueControl(BuildContext context) {
-    if (controller.text.isEmpty) {
-      {
-        Provider.of<BoolModel>(context, listen: false).isChangeTry();
-      }
-    } else {
-      if (Provider.of<BoolModel>(context, listen: false).isChange) {
-        return;
-      } else {
-        Provider.of<BoolModel>(context, listen: false).isChangeTry();
-      }
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<BoolModel>(
       create: (context) => BoolModel(),
       builder: (context, child) {
-        textFieldValueControl(context);
         return AppBar(
           automaticallyImplyLeading: false,
           titleSpacing: 12,
@@ -137,7 +116,12 @@ class SearchAppBar extends StatelessWidget implements PreferredSizeWidget {
                       .isChangeSecure();
                 }
               },
-              onChanged: callBack,
+              onChanged: controller.text.isEmpty
+                  ? (value) {
+                      Provider.of<BoolModel>(context, listen: false)
+                          .isChangeTry();
+                    }
+                  : callBack,
               decoration: InputDecoration(
                 contentPadding: contentPadding,
                 filled: true,

@@ -3,6 +3,7 @@
 Search Appbar Tool have easy components for your fixed search bar.
 This tool provide you customizable widgets.
 
+![gif](/img/package.gif)
 
 #
 ## Getting Started
@@ -19,15 +20,15 @@ This tool provide you customizable widgets.
 ## SearchAppBar() Widget
 
 This widget should be in appBar section in Scaffold.
-
+```dart
       Scaffold(
       appBar: SearchAppBar(
         controller: controller,
         callBack: (value) {},
       ),
-
+```
 As you see you will need to give TextFieldController and TextField onChange metod. That's enough for Appbar working but you can customize this widget for example...
-
+```dart
       SearchAppBar(
           //customize features
           suffixIconColor: Colors.red,
@@ -46,13 +47,13 @@ As you see you will need to give TextFieldController and TextField onChange meto
           controller: controller,
           callBack: (value) => ,
         )
-
+```
 #
 
 ## DefaultBody() Widget
 
 This widget should be in body section in Scaffold.
-
+```dart
       Scaffold(
       body: DefaultBody(
           defaultBody: const Center(
@@ -60,7 +61,7 @@ This widget should be in body section in Scaffold.
           ),
         ),
       );
-
+```
 DefaultBody widget need to widget that defaultBody.
 Also appBar need to body for reactions. you can add all kinds of widgets into defaultBody section. But don't forget defaultBody are your main app body.
 #
@@ -68,7 +69,7 @@ Also appBar need to body for reactions. you can add all kinds of widgets into de
 ## normalSearchBody, defaultSearchBody Widgets Features
 
 you can not add these widgets but if you add them, you can write your project more easily. Let's see...
-
+```dart
       Scaffold(
       body: DefaultBody(
           defaultBody: const Center(
@@ -82,7 +83,7 @@ you can not add these widgets but if you add them, you can write your project mo
             child: Text('Normal Search Body'),
         ),
       );
-
+```
 Firstly I said defaultBody feature is a main body in your app. Other features are related to textField onTap and onChange methods.
 
 If user tap on textField section, defaultSearchBody will work. This widget similar to defaultBody
@@ -93,12 +94,15 @@ This widget similir to defaultBody only changed by change textField. You can add
 #
 
 ## Result
-### defaultBody View
+
+## defaultBody View
 ![default_1](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/defaultNew.png)
 #
-### defaultSearchBody View
+
+## defaultSearchBody View
 ![default_2](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/defaultSearchNew.png)
 #
-### normalSearchBody View
+
+## normalSearchBody View
 ![default_3](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/normalSearchNew.png)
 
