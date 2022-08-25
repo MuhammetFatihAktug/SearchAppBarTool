@@ -1,0 +1,17 @@
+name: search_appbar_tool
+description: Flutter search appbar project.
+version: 0.0.1
+authors: Muhammet Fatih Aktuğ
+homepage: https://github.com/MuhammetFatihAktug/search_appbar_tool.git
+
+environment:
+  sdk: '>=2.17.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.3
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.16.0
