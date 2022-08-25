@@ -2,42 +2,88 @@ import 'package:flutter/material.dart';
 import 'package:search_appbar_tool/search_appbar_tool.dart';
 
 void main() {
-  return runApp(MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: HomePage(),
-    );
-  }
+  State<MyApp> createState() => _MyAppState();
 }
 
-class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
-
+class _MyAppState extends State<MyApp> {
   final controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: SearchAppBar(
-        controller: controller,
-        callBack: (value) {},
+    return MaterialApp(
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(),
       ),
-      body: DefaultBody(
-        defaultBody: Center(
-          child: const Text('Default Body'),
+      home: Scaffold(
+        appBar: SearchAppBar(
+          fillColor: Colors.green,
+          prefixIconColor: Colors.black,
+          suffixIconColor: Colors.black,
+          leadingIconBtnColor: Colors.black,
+          inputBorder: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          controller: controller,
+          callBack: (value) {
+            print(value);
+          },
         ),
-        normalSearchBody: Center(
-          child: const Text('Normal Search Body'),
-        ),
-        defaultSearchBody: Center(
-          child: const Text('Default Search Body'),
+        body: DefaultBody(
+          defaultSearchBody: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(
+                  'Recent',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+                Divider(),
+                Text(
+                  'Suggestions',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+              ],
+            ),
+          ),
+          normalSearchBody: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(
+                  'Search Result',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+                Divider(),
+                Text(
+                  'Found Result',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+                Divider(),
+                Text(
+                  'Not Found Result',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+              ],
+            ),
+          ),
+          defaultBody: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(
+                  'Main Body',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
