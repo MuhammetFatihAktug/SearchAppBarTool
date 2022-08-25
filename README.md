@@ -96,7 +96,7 @@ This widget similir to defaultBody only changed by change textField. You can add
 
 ![default_1](/img/defaultNew.png)
 
-![default_1](/img/defaultSearchNew.png)
+![default_2](/img/defaultSearchNew.png)
 
-![default_1](/img/normalSearchNew.png)
+![default_3](/img/normalSearchNew.png)
 
