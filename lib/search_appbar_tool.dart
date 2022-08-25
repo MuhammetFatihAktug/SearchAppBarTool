@@ -1,7 +1,7 @@
 /// Support for doing something awesome.
 ///
 /// More dartdocs go here.
-library package;
+library search_appbar_tool;
 
 export 'src/search_appbar.dart';
 
