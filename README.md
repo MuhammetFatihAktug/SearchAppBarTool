@@ -3,7 +3,7 @@
 Search Appbar Tool have easy components for your fixed search bar.
 This tool provide you customizable widgets.
 
-![gif](/img/package.gif)
+![gif](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/package.gif)
 
 #
 ## Getting Started
