@@ -1,6 +1,6 @@
 name: search_appbar_tool
-description: Flutter Search AppBar Tool kit.
-version: 0.1.1
+description: Flutter Search AppBar Toolkit.
+version: 0.1.2
 homepage: https://github.com/MuhammetFatihAktug/SearchAppBarTool.git
 
 environment:
