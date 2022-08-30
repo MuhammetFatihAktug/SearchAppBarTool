@@ -93,14 +93,14 @@ If user write on textField normalSearchBody will work.
 This widget similir to defaultBody only changed by change textField. You can add 'search results', 'found' or 'not found' pages here.
 
 
-## Result
+# Result
 
-## defaultBody View
+## DefaultBody View
 ![default_1](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/defaultNew.png)
 
-## defaultSearchBody View
+## DefaultSearchBody View
 ![default_2](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/defaultSearchNew.png)
 
-## normalSearchBody View
+## NormalSearchBody View
 ![default_3](https://github.com/MuhammetFatihAktug/SearchAppBarTool/blob/main/img/normalSearchNew.png)
 

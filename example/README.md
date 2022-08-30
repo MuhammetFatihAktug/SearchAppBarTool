@@ -1,16 +1,106 @@
 # example
 
-A new Flutter project.
+```dart
+import 'package:flutter/material.dart';
+import 'package:search_appbar_tool/search_appbar_tool.dart';
 
-## Getting Started
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
 
-This project is a starting point for a Flutter application.
+  @override
+  State<MyHomePage> createState() =>
+      _MyHomePageState();
+}
 
-A few resources to get you started if this is your first Flutter project:
+class _MyHomePageState extends State<MyHomePage> {
+  final controller = TextEditingController();
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(),
+      ),
+      home: Scaffold(
+        appBar: SearchAppBar(
+          fillColor: Colors.green,
+          prefixIconColor: Colors.black,
+          suffixIconColor: Colors.black,
+          leadingIconBtnColor: Colors.black,
+          inputBorder: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+                Radius.circular(20)),
+          ),
+          controller: controller,
+          callBack: (value) {},
+        ),
+        body: DefaultBody(
+          defaultSearchBody: Center(
+            child: Column(
+              mainAxisAlignment:
+                  MainAxisAlignment.center,
+              children: const [
+                Text(
+                  'Recent',
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black),
+                ),
+                Divider(),
+                Text(
+                  'Suggestions',
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black),
+                ),
+              ],
+            ),
+          ),
+          normalSearchBody: Center(
+            child: Column(
+              mainAxisAlignment:
+                  MainAxisAlignment.center,
+              children: const [
+                Text(
+                  'Search Result',
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black),
+                ),
+                Divider(),
+                Text(
+                  'Found Result',
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black),
+                ),
+                Divider(),
+                Text(
+                  'Not Found Result',
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black),
+                ),
+              ],
+            ),
+          ),
+          defaultBody: Center(
+            child: Column(
+              mainAxisAlignment:
+                  MainAxisAlignment.center,
+              children: const [
+                Text(
+                  'Main Body',
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
